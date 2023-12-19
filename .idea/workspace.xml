@@ -40,7 +40,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702995491305</updated>
-      <workItem from="1702995492347" duration="3106000" />
+      <workItem from="1702995492347" duration="3537000" />
     </task>
     <task id="LOCAL-00001" summary="Coursework Version 1">
       <created>1702999885732</created>
@@ -56,7 +56,21 @@
       <option name="project" value="LOCAL" />
       <updated>1703000035644</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Coursework Version 1">
+      <created>1703000084083</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1703000084083</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Coursework Version 1">
+      <created>1703000101715</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703000101715</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -64,6 +78,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Coursework Version 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coursework Version 1" />
+    <MESSAGE value="coursework version 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="coursework version 1" />
   </component>
 </project>
