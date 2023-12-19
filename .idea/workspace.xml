@@ -13,6 +13,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="e132bcbb-12aa-4d61-a0df-b3c094529ae7" />
+        <option name="url" value="https://github.com/Chenuka608/CourseworkOOP.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectId" id="2ZlT6IgJIpyGpcYetniLWdkt41R" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
