@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b411eb21-1060-4b5d-9e65-e20148f12c84" name="Changes" comment="coursework version 1" />
+    <list default="true" id="b411eb21-1060-4b5d-9e65-e20148f12c84" name="Changes" comment="version 1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1702995491305</updated>
-      <workItem from="1702995492347" duration="3880000" />
+      <workItem from="1702995492347" duration="4393000" />
     </task>
     <task id="LOCAL-00001" summary="Coursework Version 1">
       <created>1702999885732</created>
@@ -97,7 +97,21 @@
       <option name="project" value="LOCAL" />
       <updated>1703000629043</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="version 1">
+      <created>1703000953257</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1703000953257</updated>
+    </task>
+    <task id="LOCAL-00008" summary="version 1">
+      <created>1703001159874</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703001159874</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Coursework Version 1" />
     <MESSAGE value="coursework version 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="coursework version 1" />
+    <MESSAGE value="version 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 1" />
   </component>
 </project>
