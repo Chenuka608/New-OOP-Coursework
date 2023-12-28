@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b411eb21-1060-4b5d-9e65-e20148f12c84" name="Changes" comment="12/27/2023 updated version">
+    <list default="true" id="b411eb21-1060-4b5d-9e65-e20148f12c84" name="Changes" comment="12/27/2023 updated version2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Electronics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Electronics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WestminsterShoppingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WestminsterShoppingManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +151,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703684952714</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="12/27/2023 updated version2.0">
+      <created>1703686829856</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1703686829856</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +181,7 @@
     <MESSAGE value="version 1" />
     <MESSAGE value="addNewProducts Updated" />
     <MESSAGE value="12/27/2023 updated version" />
-    <option name="LAST_COMMIT_MESSAGE" value="12/27/2023 updated version" />
+    <MESSAGE value="12/27/2023 updated version2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="12/27/2023 updated version2.0" />
   </component>
 </project>

@@ -8,10 +8,14 @@ public class WestminsterShoppingManager {
         this.productList = new ArrayList<>();
     }
 
-    public void addProduct(Product product){
+    public void addClothProduct(Product product){
         productList.add(product);
         System.out.println("Product added Successfully !");
 
+    }
+    public void addElecProduct(Product product){
+        productList.add(product);
+        System.out.println("Electronic Product added Successfully");
     }
 
     public void delProduct (Product product){

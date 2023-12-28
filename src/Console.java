@@ -131,7 +131,7 @@ public class Console {                                                          
             String color = input.next();
 
             Clothing clothing = new Clothing(size, color, productId, name, numOfProduct, price);
-            m1.addProduct(clothing);
+            m1.addClothProduct(clothing);
             System.out.println("If you want to add another product press [y] or press[n] to quit");
             String selection = input.next();
             if ("y".equalsIgnoreCase(selection)) {
@@ -149,22 +149,33 @@ public class Console {                                                          
     public static void addElecProduct(){
         while(isTrue){
             System.out.println("Enter Electronic Product Details :\n");
+
             System.out.println("Enter the ProductID :");
-            String option = input.next();
+            String productID = input.next();
             System.out.println("Enter the Product Name :");
             String name = input.next();
+            System.out.println("Enter the Product Brand");
+            String brand = input.next();
             System.out.println("Enter no. of available Products");
             int numOfProduct = input.nextInt();
             System.out.println("Enter the Product Price :");
-            double Price = input.nextDouble();
+            double price = input.nextDouble();
 
             System.out.println("Enter the warranty Period :");
             int warranty = input.nextInt();
 
+            Electronics electronics = new Electronics(brand,warranty,productID,name,numOfProduct,price);
+            m1.addElecProduct(electronics);
+            System.out.println("If you want to add another product press [y] or press[n] to quit");
+            String selection = input.next();
+            if ("y".equalsIgnoreCase(selection)) {
+                continue;
+            } else {
+                break;
+            }
         }
-
-
     }
+
     public static void deleteClothingItem(){
 
     }
