@@ -81,7 +81,7 @@ public class Console {                                                          
             addClothingProduct();
         } else if (option.equalsIgnoreCase("e")) {
             {
-                System.out.println("============Enter Electronic product to Add============\n");
+                System.out.println("=============Enter Electronic product to Add============\n");
                 addElecProduct();
             }
 

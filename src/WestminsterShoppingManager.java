@@ -31,7 +31,7 @@ public class WestminsterShoppingManager {
 
     public void addElecProduct(Product product){
         productList.add(product);
-        System.out.println("Electronic Product added Successfully");
+        System.out.println("Electronic Product added Successfully!");
     }
 
     public void delClothingProduct (String productID){
