@@ -8,6 +8,17 @@ public class Electronics extends Product{
     private int numOfProducts;
     private double price;
 
+    @Override
+    public String toString() {        //override to String method to be able to print the electronic specifications
+        return "" +
+                " " + Brand + '\'' +
+                " " + warrantyPeriod+ '\'' +
+                " " + productID +
+                " " + productName +
+                " " + price +
+                " ";
+    }
+
     public Electronics (String Brand, int warrantyPeriod  , String productID, String productName, int numOfProducts, double price){
         super(productID, productName, numOfProducts, price);
         this.Brand = Brand;

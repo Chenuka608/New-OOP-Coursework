@@ -22,13 +22,16 @@ public class Console {                                                          
         System.out.println("Enter  [q]  To Exit the Program .\n------------------------------------------------------------------");
 
         while (isTrue) {
+            System.out.println("---------------------------------\n");
+            m1.printProducts();
+            System.out.println("---------------------------------\n");
             System.out.println("\n Enter your Option : ");
             String option = input.next();
 
             switch (option) {
                 case "a":
                 case "A":
-                    addNewProduct(input);
+                    addNewProduct(input); //(done)
                     break;
 
                 case "d":
@@ -99,6 +102,9 @@ public class Console {                                                          
         } else if (option.equalsIgnoreCase("e")) {
             deleteElecItem();
         }
+        else {
+            System.out.println("Invalid Option ! Pls Enter again");
+        }
 
     }
 
@@ -131,7 +137,7 @@ public class Console {                                                          
             String color = input.next();
 
             Clothing clothing = new Clothing(size, color, productId, name, numOfProduct, price);
-            m1.addClothProduct(clothing);
+            m1.addCLothingProduct(clothing);
             System.out.println("If you want to add another product press [y] or press[n] to quit");
             String selection = input.next();
             if ("y".equalsIgnoreCase(selection)) {
@@ -177,7 +183,9 @@ public class Console {                                                          
     }
 
     public static void deleteClothingItem(){
-
+        System.out.println("Enter the productID of the Clothing to be deleted : ");
+        String productID = input.next();
+        m1.delClothingProduct(productID);
     }
 
     public static void deleteElecItem(){

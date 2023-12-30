@@ -12,5 +12,8 @@ public class Product {
         this.warranty = warranty;
 
     }
+    public String getProductID(){
+        return this.ProductID;
+    }
 
 }
