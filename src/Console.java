@@ -110,6 +110,7 @@ public class Console {                                                          
 
     public static void printProductList() {
 
+
     }
 
     public static void saveListToFile() {
@@ -122,7 +123,7 @@ public class Console {                                                          
 
     public static void addClothingProduct() {
         while (isTrue) {
-            System.out.println("Enter Clothing product details :\n");
+            System.out.println("-----Enter Clothing product details :------\n");
             System.out.println("Enter the ProductID:");
             String productId = input.next();
             System.out.println("Enter the Product Name:");
@@ -154,7 +155,7 @@ public class Console {                                                          
 
     public static void addElecProduct(){
         while(isTrue){
-            System.out.println("Enter Electronic Product Details :\n");
+            System.out.println("------Enter Electronic Product Details :-------\n");
 
             System.out.println("Enter the ProductID :");
             String productID = input.next();
@@ -189,6 +190,9 @@ public class Console {                                                          
     }
 
     public static void deleteElecItem(){
+        System.out.println("Enter the productID of the Electronic to be deleted : ");
+        String productID = input.next();
+        m1.delElecProduct(productID);
 
     }
 
