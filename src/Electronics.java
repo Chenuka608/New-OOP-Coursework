@@ -28,6 +28,12 @@ public class Electronics extends Product{
         this.numOfProducts=numOfProducts;
         this.price=price;
     }
+    public String getBrand(){
+        return this.Brand;
+    }
+    public int getWarrantyPeriod(){
+        return this.warrantyPeriod;
+    }
 
 }
 

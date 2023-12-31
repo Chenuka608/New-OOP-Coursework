@@ -29,6 +29,13 @@ public class Clothing extends Product {
         this.price = price;
 
     }
+    public String getColour(){
+        return this.colour;
+    }
+
+    public double getSize(){
+        return this.size;
+    }
     //getters & setters
 
 }

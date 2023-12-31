@@ -109,6 +109,7 @@ public class Console {                                                          
     }
 
     public static void printProductList() {
+        m1.SortProductList();
 
 
     }
