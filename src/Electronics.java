@@ -35,5 +35,8 @@ public class Electronics extends Product{
         return this.warrantyPeriod;
     }
 
+    public double getPrice() {
+        return this.price;
+    }
 }
 

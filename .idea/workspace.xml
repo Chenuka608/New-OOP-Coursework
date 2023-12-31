@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b411eb21-1060-4b5d-9e65-e20148f12c84" name="Changes" comment="12/30 /2023 updated version 2.0">
+    <list default="true" id="b411eb21-1060-4b5d-9e65-e20148f12c84" name="Changes" comment="12/31 /2023 updated version 1.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clothing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clothing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Electronics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Electronics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WestminsterShoppingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WestminsterShoppingManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703957100127</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="12/31 /2023 updated version 1.0">
+      <created>1704022179314</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1704022179314</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +229,7 @@
     <MESSAGE value="12/28 /2023 updated version 1.0" />
     <MESSAGE value="12/30 /2023 updated version 1.0" />
     <MESSAGE value="12/30 /2023 updated version 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="12/30 /2023 updated version 2.0" />
+    <MESSAGE value="12/31 /2023 updated version 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="12/31 /2023 updated version 1.0" />
   </component>
 </project>

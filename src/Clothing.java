@@ -36,6 +36,12 @@ public class Clothing extends Product {
     public double getSize(){
         return this.size;
     }
+
+
+    public double getPrice() {
+        return this.price;
+    }
+
     //getters & setters
 
 }

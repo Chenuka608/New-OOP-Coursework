@@ -1,4 +1,6 @@
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 public class WestminsterShoppingManager {
     private List<Product> productList;
@@ -98,6 +100,36 @@ public class WestminsterShoppingManager {
         }
         System.out.println("Remaining Product count: " + productCount );
     }
+
+    public void saveListToFile(String productListSave) {
+        try {
+            FileWriter storeData = new FileWriter(productListSave);
+
+            for (Product product : getProductList()) {
+                String line = "";
+                if (product instanceof Clothing) {
+                    Clothing clothing = (Clothing) product;
+                    line = "Clothing " + clothing.getProductID() + "    " + clothing.getProductName() + "    " +
+                            clothing.getNumOfProducts() + "    " + clothing.getPrice() + "    " +
+                            clothing.getSize() + "    " + clothing.getColour();
+                } else if (product instanceof Electronics) {
+                    Electronics electronics = (Electronics) product;
+                    line = "Electronics " + electronics.getProductID() + " " + electronics.getProductName() + " " +
+                            electronics.getNumOfProducts() + " " + electronics.getPrice() + " " +
+                            electronics.getBrand() + " " + electronics.getWarrantyPeriod();
+                }
+                storeData.write(line + "\n");
+            }
+
+            storeData.close();
+            System.out.println("Product List Saved Successfully");
+
+        } catch (IOException e) {
+            System.out.println("An Error Occurred when writing: " + e.getMessage());
+        }
+    }
+
+
 
 
 

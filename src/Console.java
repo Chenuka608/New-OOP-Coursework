@@ -1,4 +1,6 @@
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;                                                             //Name   - K.K.C.N Sarathchandra
 public class Console {                                                          //Uow No - w1998757    IIT No - 20221022
 
@@ -12,16 +14,17 @@ public class Console {                                                          
     public static void main(String[] args) {
 
 
-        System.out.println("\nShopping System Menu \n------------------------------------------------------------------");
-        System.out.println("Enter  [a]  To Add a new product");
-        System.out.println("Enter  [d]  To Delete a product");
-        System.out.println("Enter  [p]  To Print the list of products");
-        System.out.println("Enter  [s]  To Save the product list in a file ");
-        System.out.println("Enter  [l]  To Load the list of products from a file");
-        System.out.println("Enter  [g]  To open the gui");
-        System.out.println("Enter  [q]  To Exit the Program .\n------------------------------------------------------------------");
 
         while (isTrue) {
+            System.out.println("\nShopping System Menu \n------------------------------------------------------------------");
+            System.out.println("Enter  [a]  To Add a new product");
+            System.out.println("Enter  [d]  To Delete a product");
+            System.out.println("Enter  [p]  To Print the list of products");
+            System.out.println("Enter  [s]  To Save the product list in a file ");
+            System.out.println("Enter  [l]  To Load the list of products from a file");
+            System.out.println("Enter  [g]  To open the gui");
+            System.out.println("Enter  [q]  To Exit the Program .\n------------------------------------------------------------------");
+
             System.out.println("---------------------------------\n");
             m1.printProducts();
             System.out.println("---------------------------------\n");
@@ -115,8 +118,9 @@ public class Console {                                                          
     }
 
     public static void saveListToFile() {
-
+        m1.saveListToFile("saveFile");
     }
+
 
     public static void loadSavedList() {                         // rest of the methods for delete and add products
 
@@ -149,8 +153,6 @@ public class Console {                                                          
             }
         }
     }
-
-
 
 
 
