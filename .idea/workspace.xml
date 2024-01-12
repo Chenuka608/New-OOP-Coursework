@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b411eb21-1060-4b5d-9e65-e20148f12c84" name="Changes" comment="12/31 /2023 updated version 1.0">
+    <list default="true" id="b411eb21-1060-4b5d-9e65-e20148f12c84" name="Changes" comment="12/31 /2023 updated version 2.0">
+      <change afterPath="$PROJECT_DIR$/src/Gui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Console.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Console.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Electronics.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Electronics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ShoppingCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/WestminsterShoppingManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/WestminsterShoppingManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,6 +76,7 @@
       <workItem from="1703474195220" duration="740000" />
       <workItem from="1703478792472" duration="334000" />
       <workItem from="1703824699961" duration="21000" />
+      <workItem from="1704114141039" duration="3033000" />
     </task>
     <task id="LOCAL-00001" summary="Coursework Version 1">
       <created>1702999885732</created>
@@ -202,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704022179314</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="12/31 /2023 updated version 2.0">
+      <created>1704032081734</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1704032081734</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +239,7 @@
     <MESSAGE value="12/30 /2023 updated version 1.0" />
     <MESSAGE value="12/30 /2023 updated version 2.0" />
     <MESSAGE value="12/31 /2023 updated version 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="12/31 /2023 updated version 1.0" />
+    <MESSAGE value="12/31 /2023 updated version 2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="12/31 /2023 updated version 2.0" />
   </component>
 </project>

@@ -122,7 +122,8 @@ public class Console {                                                          
     }
 
 
-    public static void loadSavedList() {                         // rest of the methods for delete and add products
+    public static void loadSavedList() {
+        m1.loadListFromFile("saveFile");
 
     }
 

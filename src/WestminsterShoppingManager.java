@@ -1,4 +1,5 @@
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
@@ -57,7 +58,7 @@ public class WestminsterShoppingManager {
 
 
     public void addElecProduct(Product product) {
-        if (productCount == 0) {
+        if (productCount == 50) {
             System.out.println("----Sorry cannot add product!! , max product limit is 50 ----");
         } else {
             productList.add(product);
@@ -99,6 +100,7 @@ public class WestminsterShoppingManager {
             System.out.println("Electronic product with ID: " + productID + " has not been Found!");
         }
         System.out.println("Remaining Product count: " + productCount );
+
     }
 
     public void saveListToFile(String productListSave) {
@@ -109,9 +111,9 @@ public class WestminsterShoppingManager {
                 String line = "";
                 if (product instanceof Clothing) {
                     Clothing clothing = (Clothing) product;
-                    line = "Clothing " + clothing.getProductID() + "    " + clothing.getProductName() + "    " +
-                            clothing.getNumOfProducts() + "    " + clothing.getPrice() + "    " +
-                            clothing.getSize() + "    " + clothing.getColour();
+                    line = "Clothing " + clothing.getProductID() + " " + clothing.getProductName() + " " +
+                            clothing.getNumOfProducts() + " " + clothing.getPrice() + " " +
+                            clothing.getSize() + " " + clothing.getColour();
                 } else if (product instanceof Electronics) {
                     Electronics electronics = (Electronics) product;
                     line = "Electronics " + electronics.getProductID() + " " + electronics.getProductName() + " " +
@@ -128,7 +130,56 @@ public class WestminsterShoppingManager {
             System.out.println("An Error Occurred when writing: " + e.getMessage());
         }
     }
+    public void loadListFromFile(String fileName) {
+        try {
+            File file = new File(fileName);
+            if (!file.exists()) {
+                System.out.println("File does not exist!");
+                return;
+            }
 
+            Scanner read = new Scanner(file);
+
+            while (read.hasNextLine()) {
+                String line = read.nextLine();
+                String[] parts = line.split(" ");
+
+                if (parts.length >= 2) {
+                    String type = parts[0];
+
+                    if (type.equalsIgnoreCase("Clothing") && parts.length == 7) {
+                        // Parse Clothing information
+                        String productId = parts[1];
+                        String productName = parts[2];
+                        int numOfProducts = Integer.parseInt(parts[3]);
+                        double price = Double.parseDouble(parts[4]);
+                        double size = Double.parseDouble(parts[5]);
+                        String color = parts[6];
+
+                        Clothing clothing = new Clothing(size, color, productId, productName, numOfProducts, price);
+                        productList.add(clothing);
+                    } else if (type.equalsIgnoreCase("Electronics") && parts.length == 7) {
+                        // Parse Electronics information
+                        String productId = parts[1];
+                        String productName = parts[2];
+                        int numOfProducts = Integer.parseInt(parts[3]);
+                        double price = Double.parseDouble(parts[4]);
+                        String brand = parts[5];
+                        int warranty = (int) Double.parseDouble(parts[6]);
+
+                        Electronics electronics = new Electronics(brand, warranty, productId, productName, numOfProducts, price);
+                        productList.add(electronics);
+                    }
+                }
+            }
+
+            read.close();
+            System.out.println("---------Product List Loaded Successfully!-------");
+
+        } catch (IOException | NumberFormatException e) {
+            System.out.println("An Error Occurred when loading data: " + e.getMessage());
+        }
+    }
 
 
 

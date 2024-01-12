@@ -23,9 +23,23 @@ public class ShoppingCart {
 
         products.remove(product);
     }
-    public List<Product> getShoppingCart (){
+    public List<Product> getShoppingCart(){
 
         return products;
     }
+    public List<Product> getProductsByType(String productType) {
+        List<Product> filteredProducts = new ArrayList<>();
 
+        for (Product product : products) {
+            if ("Clothing".equalsIgnoreCase(productType) && product instanceof Clothing) {
+                filteredProducts.add(product);
+            } else if ("Electronics".equalsIgnoreCase(productType) && product instanceof Electronics) {
+                filteredProducts.add(product);
+            }
+        }
+
+        return filteredProducts;
+    }
 }
+
+
