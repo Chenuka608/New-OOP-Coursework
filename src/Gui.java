@@ -15,6 +15,10 @@ public class Gui extends JFrame {
     public Gui() {
         shoppingCart = new ShoppingCart();  // Initialize the shopping cart
 
+        shoppingCart.addElecProduct(new Electronics("Sony", 3, "w1998", "OLED TV", 5, 69.99));
+        shoppingCart.addClothingProduct(new Clothing(5, "pink", "w199", "Hoodie", 4, 25.15));
+
+
         setTitle("Westminster Shopping Centre");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
@@ -34,7 +38,7 @@ public class Gui extends JFrame {
         add(new JScrollPane(productDetails), BorderLayout.SOUTH);
 
         // Initialize the table model and set it to the JTable
-        String[] columnNames = {"Product ID", "Product Name", "Quantity", "Price", "Attribute 1", "Attribute 2"};
+        String[] columnNames = {"Product ID", "Product Name", "Category", "Price", "Info"};
         tableModel = new DefaultTableModel(columnNames, 0);
         productTable.setModel(tableModel);
     }
@@ -64,8 +68,8 @@ public class Gui extends JFrame {
     }
 
     private JTable createProductTable() {
-        // Assuming you have a DefaultTableModel
-        return new JTable();
+        return new JTable(tableModel);
+
     }
 
     private void updateProductTable(String productType) {
@@ -101,7 +105,9 @@ public class Gui extends JFrame {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Gui().setVisible(true);
+                Gui gui = new Gui();
+                gui.updateProductTable("All"); // Call the instance method on the created instance
+                gui.setVisible(true);
             }
         });
     }
