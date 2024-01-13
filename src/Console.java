@@ -1,11 +1,15 @@
+import javax.swing.SwingUtilities;
 
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;                                                             //Name   - K.K.C.N Sarathchandra
-public class Console {                                                          //Uow No - w1998757    IIT No - 20221022
+public class Console {                                                 //Uow No - w1998757    IIT No - 20221022
 
 
     private static Scanner input = new Scanner(System.in);
+
+    private static Gui gui;
+
 
     private static boolean isTrue = true;
 
@@ -13,6 +17,7 @@ public class Console {                                                          
 
     public static void main(String[] args) {
 
+        gui = new Gui();
 
 
         while (isTrue) {
@@ -63,6 +68,11 @@ public class Console {                                                          
                     isTrue = false;
                     break;
 
+                case "g":
+                case "G":
+                    openGui();
+                    break;
+
                 default:
                     System.out.println("Invalid Option !");  // handling in case invalid input
                     break;
@@ -70,6 +80,7 @@ public class Console {                                                          
 
         }
     }
+
 
     //Method implementation for each relevent switch cases
     public static void addNewProduct(Scanner input) {
@@ -104,8 +115,7 @@ public class Console {                                                          
 
         } else if (option.equalsIgnoreCase("e")) {
             deleteElecItem();
-        }
-        else {
+        } else {
             System.out.println("Invalid Option ! Pls Enter again");
         }
 
@@ -125,79 +135,119 @@ public class Console {                                                          
     public static void loadSavedList() {
         m1.loadListFromFile("saveFile");
 
+
     }
 
     public static void addClothingProduct() {
-        while (isTrue) {
-            System.out.println("-----Enter Clothing product details :------\n");
-            System.out.println("Enter the ProductID:");
-            String productId = input.next();
-            System.out.println("Enter the Product Name:");
-            String name = input.next();
-            System.out.println("Enter no. of available Products :");
-            int numOfProduct = input.nextInt();
-            System.out.println("Enter the Product Price:");
-            double price = input.nextDouble();
-            System.out.println("Enter the Clothing Size:");
-            int size = input.nextInt();
-            System.out.println("Enter the Clothing Color:");
-            String color = input.next();
+        try {
 
-            Clothing clothing = new Clothing(size, color, productId, name, numOfProduct, price);
-            m1.addCLothingProduct(clothing);
-            System.out.println("If you want to add another product press [y] or press[n] to quit");
-            String selection = input.next();
-            if ("y".equalsIgnoreCase(selection)) {
-                continue;
-            } else {
-                break;
+
+            while (isTrue) {
+                System.out.println("-----Enter Clothing product details :------\n");
+                System.out.println("Enter the ProductID:");
+                String productId = input.next();
+                System.out.println("Enter the Product Name:");
+                String name = input.next();
+                System.out.println("Enter no. of available Products :");
+                int numOfProduct = input.nextInt();
+                System.out.println("Enter the Product Price:");
+                double price = input.nextDouble();
+                System.out.println("Enter the Clothing Size:");
+                int size = input.nextInt();
+                System.out.println("Enter the Clothing Color:");
+                String color = input.next();
+
+                Clothing clothing = new Clothing(size, color, productId, name, numOfProduct, price);
+                m1.addCLothingProduct(clothing);
+                updateGui();
+                System.out.println("If you want to add another Clothing product press [y] or press[n] to quit");
+                String selection = input.next();
+                if ("y".equalsIgnoreCase(selection)) {
+                    continue;
+                } else {
+                    break;
+                }
             }
+        }catch(InputMismatchException e){
+            System.out.println("Pls Enter an Integer value!- cancelling product creation");input.next();
         }
     }
 
 
+    public static void addElecProduct() {
+        try {
+            while (isTrue) {
+                System.out.println("------Enter Electronic Product Details :-------\n");
 
-    public static void addElecProduct(){
-        while(isTrue){
-            System.out.println("------Enter Electronic Product Details :-------\n");
+                System.out.println("Enter the ProductID :");
+                String productID = input.next();
+                System.out.println("Enter the Product Name :");
+                String name = input.next();
+                System.out.println("Enter the Product Brand");
+                String brand = input.next();
+                System.out.println("Enter no. of available Products");
+                int numOfProduct = input.nextInt();
+                System.out.println("Enter the Product Price :");
+                double price = input.nextDouble();
 
-            System.out.println("Enter the ProductID :");
-            String productID = input.next();
-            System.out.println("Enter the Product Name :");
-            String name = input.next();
-            System.out.println("Enter the Product Brand");
-            String brand = input.next();
-            System.out.println("Enter no. of available Products");
-            int numOfProduct = input.nextInt();
-            System.out.println("Enter the Product Price :");
-            double price = input.nextDouble();
+                System.out.println("Enter the warranty Period :");
+                int warranty = input.nextInt();
 
-            System.out.println("Enter the warranty Period :");
-            int warranty = input.nextInt();
-
-            Electronics electronics = new Electronics(brand,warranty,productID,name,numOfProduct,price);
-            m1.addElecProduct(electronics);
-            System.out.println("If you want to add another product press [y] or press[n] to quit");
-            String selection = input.next();
-            if ("y".equalsIgnoreCase(selection)) {
-                continue;
-            } else {
-                break;
+                Electronics electronics = new Electronics(brand, warranty, productID, name, numOfProduct, price);
+                m1.addElecProduct(electronics);
+                updateGui();
+                System.out.println("If you want to add another Electronic product press [y] or press[n] to quit");
+                String selection = input.next();
+                if ("y".equalsIgnoreCase(selection)) {
+                    continue;
+                } else {
+                    break;
+                }
             }
+        }catch(InputMismatchException e){
+            System.out.println("Pls Enter an Integer value! - cancelling product creation");input.next();
         }
     }
 
-    public static void deleteClothingItem(){
+    public static void deleteClothingItem() {
         System.out.println("Enter the productID of the Clothing to be deleted : ");
         String productID = input.next();
         m1.delClothingProduct(productID);
+        updateGui();
     }
 
-    public static void deleteElecItem(){
+    public static void deleteElecItem() {
         System.out.println("Enter the productID of the Electronic to be deleted : ");
         String productID = input.next();
         m1.delElecProduct(productID);
+        updateGui();
 
     }
 
+    public static void openGui() {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                gui.setVisible(true);
+                gui.updateProductTable("All"); // Update with all products
+                System.out.println("GUI opened successfully.");
+            }
+        });
+    }
+
+
+    private static void updateGui() {
+        if (gui != null) {
+            System.out.println("Updating GUI...");
+            SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    gui.updateProductTable("All");
+                    System.out.println("GUI updated successfully.");
+                }
+            });
+        } else {
+            System.out.println("GUI instance is null. Cannot update GUI.");
+        }
+    }
 }

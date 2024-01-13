@@ -40,6 +40,10 @@ public class ShoppingCart {
 
         return filteredProducts;
     }
+    public void addToShoppingCart(Product product) {
+        products.add(product);
+    }
 }
+
 
 
